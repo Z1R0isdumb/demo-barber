@@ -1,30 +1,24 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Scissors, Sparkles } from "lucide-react";
-import barber1 from "../assets/barber-1.jpg";
-import barber2 from "../assets/barber-2.jpg";
-import barber3 from "../assets/barber-3.jpg";
+import { Scissors, Star, ArrowRight } from "lucide-react";
+import { BarberSilhouette } from "../components/BarberSilhouette";
+import { DemoOverlay } from "../components/DemoOverlay";
 
 const barbers = [
   {
-    name: "Master Barber",
-    title: "TRINQ Team",
-    image: barber1,
-    bio: "A dedicated craftsman specializing in precision fades, classic cuts, and detail work. Every client leaves looking sharp.",
-    specialties: ["Skin Fades", "Classic Cuts", "Line Ups"],
+    name: "Vinicius Fonseca",
+    title: "TRINQ Barber",
+    rating: "5.0",
+    reviews: "4 Reviews",
+    featuredService: "Haircut",
+    price: "$35",
   },
   {
-    name: "Barber",
-    title: "TRINQ Team",
-    image: barber2,
-    bio: "Focused on clean, modern styles and a smooth chair-side experience. Every service is tailored to the client.",
-    specialties: ["Modern Styles", "Beard Trims", "Hot Towel Shaves"],
-  },
-  {
-    name: "Grooming Specialist",
-    title: "TRINQ Team",
-    image: barber3,
-    bio: "Beard sculpting and full grooming are the specialty. Every detail matters — from the first cut to the final touch.",
-    specialties: ["Beard Grooming", "Full Grooming", "Kids Cuts"],
+    name: "Julio Mariano",
+    title: "TRINQ Barber",
+    rating: "5.0",
+    reviews: "2 Reviews",
+    featuredService: "Haircut",
+    price: "$35",
   },
 ];
 
@@ -61,21 +55,15 @@ function BarbersPage() {
 
       {/* Barbers Grid */}
       <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
           {barbers.map((barber) => (
             <div
               key={barber.name}
               className="group border border-border/50 bg-card/30 transition-colors hover:border-primary/30"
             >
-              <div className="aspect-[4/5] overflow-hidden">
-                <img
-                  src={barber.image}
-                  alt={barber.name}
-                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  loading="lazy"
-                  width={800}
-                  height={1000}
-                />
+              <div className="relative aspect-[4/5] overflow-hidden">
+                <BarberSilhouette className="h-full w-full" />
+                <DemoOverlay />
               </div>
               <div className="p-6">
                 <div className="flex items-center gap-2">
@@ -87,20 +75,36 @@ function BarbersPage() {
                 <h2 className="mt-2 font-heading text-2xl font-bold text-foreground">
                   {barber.name}
                 </h2>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                  {barber.bio}
-                </p>
-                <div className="mt-4 flex flex-wrap gap-2">
-                  {barber.specialties.map((specialty) => (
-                    <span
-                      key={specialty}
-                      className="inline-flex items-center gap-1 rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs font-medium text-primary"
-                    >
-                      <Sparkles className="h-3 w-3" />
-                      {specialty}
-                    </span>
-                  ))}
+                <div className="mt-3 flex items-center gap-2 text-sm text-muted-foreground">
+                  <div className="flex gap-0.5">
+                    {Array.from({ length: 5 }).map((_, i) => (
+                      <Star key={i} className="h-4 w-4 fill-primary text-primary" />
+                    ))}
+                  </div>
+                  <span className="font-semibold text-foreground">{barber.rating}</span>
+                  <span>·</span>
+                  <span>{barber.reviews}</span>
                 </div>
+                <div className="mt-6 flex items-end justify-between border-t border-border/50 pt-4">
+                  <div>
+                    <p className="text-xs uppercase tracking-wider text-muted-foreground">
+                      Featured Service
+                    </p>
+                    <p className="mt-1 font-heading text-lg font-semibold text-foreground">
+                      {barber.featuredService}
+                    </p>
+                  </div>
+                  <span className="font-heading text-2xl font-bold text-primary">
+                    {barber.price}
+                  </span>
+                </div>
+                <a
+                  href="#book-now"
+                  className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-md bg-primary px-4 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
+                >
+                  Book with {barber.name.split(" ")[0]}
+                  <ArrowRight className="h-4 w-4" />
+                </a>
               </div>
             </div>
           ))}
