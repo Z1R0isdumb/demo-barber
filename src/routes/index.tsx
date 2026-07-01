@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Star, MapPin, Phone, Navigation } from "lucide-react";
+import { DemoOverlay } from "../components/DemoOverlay";
 import heroImage from "../assets/hero-barbershop.jpg";
 import serviceHaircut from "../assets/service-haircut.jpg";
 import serviceShave from "../assets/service-shave.jpg";
@@ -74,7 +75,7 @@ function HomePage() {
       {/* Featured — Asymmetric Editorial */}
       <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12">
-          <div className="lg:col-span-7">
+          <div className="relative lg:col-span-7">
             <img
               src={serviceHaircut}
               alt="Precision haircut"
@@ -83,6 +84,7 @@ function HomePage() {
               width={1024}
               height={768}
             />
+            <DemoOverlay />
           </div>
           <div className="lg:col-span-5">
             <p className="font-heading text-sm font-semibold uppercase tracking-[0.2em] text-primary">
@@ -138,8 +140,9 @@ function HomePage() {
                 width={1024}
                 height={768}
               />
+              <DemoOverlay />
               <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent" />
-              <div className="absolute bottom-0 left-0 p-6 sm:p-8">
+              <div className="absolute bottom-0 left-0 z-20 p-6 sm:p-8">
                 <p className="font-heading text-xs font-semibold uppercase tracking-wider text-primary">
                   Signature
                 </p>
@@ -161,8 +164,9 @@ function HomePage() {
                 width={1024}
                 height={768}
               />
+              <DemoOverlay />
               <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent" />
-              <div className="absolute bottom-0 left-0 p-5">
+              <div className="absolute bottom-0 left-0 z-20 p-5">
                 <h3 className="font-heading text-lg font-bold text-foreground">Skin Fade</h3>
                 <p className="mt-1 text-sm text-muted-foreground">Sharp &amp; seamless</p>
               </div>
@@ -177,8 +181,9 @@ function HomePage() {
                 width={1024}
                 height={768}
               />
+              <DemoOverlay />
               <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent" />
-              <div className="absolute bottom-0 left-0 p-5">
+              <div className="absolute bottom-0 left-0 z-20 p-5">
                 <h3 className="font-heading text-lg font-bold text-foreground">Beard Trim</h3>
                 <p className="mt-1 text-sm text-muted-foreground">Clean &amp; defined</p>
               </div>
