@@ -65,7 +65,7 @@ function ServicesPage() {
                 {t(`svc.${item.id}.desc`)}
               </p>
               <a
-                href="#book-now"
+                href="https://www.vagaro.com/trinqbarbershop/book-now" target="_blank" rel="noopener noreferrer"
                 className="mt-6 inline-flex items-center justify-center gap-2 rounded-md bg-primary px-4 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
               >
                 {t("svc.book")}
@@ -78,7 +78,7 @@ function ServicesPage() {
       <section className="mx-auto max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
         <div className="border-t border-border/50 pt-10 text-center">
           <a
-            href="#book-now"
+            href="https://www.vagaro.com/trinqbarbershop/book-now" target="_blank" rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-md bg-primary px-8 py-4 text-base font-semibold text-primary-foreground hover:bg-primary/90"
           >
             {t("cta.button")}

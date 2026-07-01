@@ -88,7 +88,7 @@ function LocationPage() {
                 <Phone className="h-4 w-4" /> {t("home.visit.call")}
               </a>
               <a
-                href="#book-now"
+                href="https://www.vagaro.com/trinqbarbershop/book-now" target="_blank" rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-md border border-primary/40 bg-primary/10 px-5 py-3 text-sm font-semibold text-primary hover:bg-primary/20"
               >
                 {t("nav.book")}
@@ -114,7 +114,7 @@ function LocationPage() {
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-muted-foreground">{t("cta.desc")}</p>
           <a
-            href="#book-now"
+            href="https://www.vagaro.com/trinqbarbershop/book-now" target="_blank" rel="noopener noreferrer"
             className="mt-8 inline-flex items-center gap-2 rounded-md bg-primary px-8 py-4 text-base font-semibold text-primary-foreground hover:bg-primary/90"
           >
             {t("cta.button")}

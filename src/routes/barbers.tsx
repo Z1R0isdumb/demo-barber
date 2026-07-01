@@ -96,7 +96,7 @@ function BarbersPage() {
                   </span>
                 </div>
                 <a
-                  href="#book-now"
+                  href="https://www.vagaro.com/trinqbarbershop/book-now" target="_blank" rel="noopener noreferrer"
                   className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-md bg-primary px-4 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
                 >
                   {t("barbers.bookWith")} {barber.name.split(" ")[0]}

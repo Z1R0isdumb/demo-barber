@@ -42,7 +42,7 @@ export function Header() {
         <div className="hidden items-center gap-3 md:flex">
           <LanguageToggle />
           <a
-            href="#book-now"
+            href="https://www.vagaro.com/trinqbarbershop/book-now" target="_blank" rel="noopener noreferrer"
             className="rounded-md bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
           >
             {t("nav.book")}
@@ -76,7 +76,7 @@ export function Header() {
               </Link>
             ))}
             <a
-              href="#book-now"
+              href="https://www.vagaro.com/trinqbarbershop/book-now" target="_blank" rel="noopener noreferrer"
               onClick={() => setMobileOpen(false)}
               className="mt-2 rounded-md bg-primary px-4 py-3 text-center text-sm font-semibold text-primary-foreground"
             >
