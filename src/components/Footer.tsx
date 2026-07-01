@@ -45,7 +45,7 @@ export function Footer() {
               <li><Link to="/barbers" className="text-muted-foreground hover:text-primary">{t("nav.barbers")}</Link></li>
               <li><Link to="/gallery" className="text-muted-foreground hover:text-primary">{t("nav.gallery")}</Link></li>
               <li><Link to="/location" className="text-muted-foreground hover:text-primary">{t("nav.location")}</Link></li>
-              <li><a href="#book-now" className="text-primary hover:text-primary/80">{t("nav.book")}</a></li>
+              <li><a href="https://www.vagaro.com/trinqbarbershop/book-now" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80">{t("nav.book")}</a></li>
             </ul>
           </div>
 

@@ -209,7 +209,7 @@ const pt: Dict = {
   "day.closed": "Fechado",
 
   "services.eyebrow": "O Que Fazemos",
-  "services.title": "Serviços de Barbearia",
+  "services.title": "Serviços da Barbearia",
   "services.desc":
     "Cada serviço da TRINQ é entregue com precisão, cuidado e a atenção aos detalhes que definem uma experiência premium de barbearia.",
 
