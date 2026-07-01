@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { DemoOverlay } from "../components/DemoOverlay";
 import galleryLounge from "../assets/gallery-lounge.jpg";
 import galleryTools from "../assets/gallery-tools.jpg";
 import galleryHaircut from "../assets/gallery-haircut-1.jpg";
@@ -66,8 +67,9 @@ function GalleryPage() {
                 width={1024}
                 height={768}
               />
+              <DemoOverlay />
               <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-              <div className="absolute bottom-0 left-0 p-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+              <div className="absolute bottom-0 left-0 z-20 p-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                 <span className="rounded bg-primary/90 px-3 py-1 text-xs font-semibold text-primary-foreground">
                   {item.label}
                 </span>
