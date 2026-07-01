@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Star, MapPin, Phone, Navigation } from "lucide-react";
 import { DemoOverlay } from "../components/DemoOverlay";
+import { useI18n } from "../lib/i18n";
 import heroImage from "../assets/hero-barbershop.jpg";
 import serviceHaircut from "../assets/service-haircut.jpg";
 import serviceShave from "../assets/service-shave.jpg";
@@ -19,6 +20,7 @@ export const Route = createFileRoute("/")({
 });
 
 function HomePage() {
+  const { t } = useI18n();
   return (
     <main className="flex-1">
       {/* Hero */}
@@ -34,30 +36,29 @@ function HomePage() {
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl">
             <p className="font-heading text-sm font-semibold uppercase tracking-[0.2em] text-primary">
-              Windermere, Florida
+              {t("home.eyebrow")}
             </p>
             <h1 className="mt-4 font-heading text-5xl font-bold leading-tight tracking-tight text-foreground sm:text-6xl lg:text-7xl">
-              <span className="text-primary">Premium</span> Barbering
+              <span className="text-primary">{t("home.title.a")}</span> {t("home.title.b")}
               <br />
-              in Windermere
+              {t("home.title.c")}
             </h1>
             <p className="mt-6 max-w-lg text-lg leading-relaxed text-muted-foreground">
-              Precision cuts, clean fades, beard grooming, and personalized service designed
-              to help you look sharp, feel confident, and stand out.
+              {t("home.hero.desc")}
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <a
                 href="#book-now"
                 className="inline-flex items-center gap-2 rounded-md bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
               >
-                Book Appointment
+                {t("home.cta.book")}
                 <ArrowRight className="h-4 w-4" />
               </a>
               <Link
                 to="/services"
                 className="inline-flex items-center gap-2 rounded-md border border-border bg-background/80 px-6 py-3 text-sm font-semibold text-foreground backdrop-blur transition-colors hover:bg-accent"
               >
-                View Services
+                {t("home.cta.services")}
               </Link>
             </div>
             <div className="mt-6 flex items-center gap-2 text-sm text-muted-foreground">
@@ -66,7 +67,7 @@ function HomePage() {
                   <Star key={i} className="h-4 w-4 fill-primary text-primary" />
                 ))}
               </div>
-              <span><span className="font-semibold text-foreground">5.0</span> · 6 reviews</span>
+              <span><span className="font-semibold text-foreground">5.0</span> · 6 {t("home.reviews")}</span>
             </div>
           </div>
         </div>
@@ -88,23 +89,19 @@ function HomePage() {
           </div>
           <div className="lg:col-span-5">
             <p className="font-heading text-sm font-semibold uppercase tracking-[0.2em] text-primary">
-              About TRINQ
+              {t("home.about.eyebrow")}
             </p>
             <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-              More Than a Haircut
+              {t("home.about.title")}
             </h2>
             <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-              TRINQ BARBERSHOP, located in Windermere, Florida, delivers a premium grooming
-              experience focused on precision, style, and confidence. From modern fades to
-              classic cuts and beard grooming, every service is tailored to the client.
-              At TRINQ, every detail matters — from the moment you walk in to the final touch.
-              This is a clean, sharp, and confident grooming experience.
+              {t("home.about.desc")}
             </p>
             <div className="mt-6 h-px w-16 bg-primary" />
             <p className="mt-6 text-sm italic text-muted-foreground">
-              Precision. Style. Confidence.
+              {t("home.about.tagline")}
               <br />
-              <span className="mt-1 block not-italic text-primary">— The TRINQ standard</span>
+              <span className="mt-1 block not-italic text-primary">{t("home.about.standard")}</span>
             </p>
           </div>
         </div>
@@ -116,17 +113,17 @@ function HomePage() {
           <div className="flex items-end justify-between">
             <div>
               <p className="font-heading text-sm font-semibold uppercase tracking-[0.2em] text-primary">
-                What We Offer
+                {t("home.services.eyebrow")}
               </p>
               <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-                Services
+                {t("home.services.title")}
               </h2>
             </div>
             <Link
               to="/services"
               className="hidden items-center gap-1 text-sm font-medium text-primary transition-colors hover:text-primary/80 sm:inline-flex"
             >
-              All Services <ArrowRight className="h-4 w-4" />
+              {t("home.services.all")} <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
 
@@ -144,13 +141,13 @@ function HomePage() {
               <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent" />
               <div className="absolute bottom-0 left-0 z-20 p-6 sm:p-8">
                 <p className="font-heading text-xs font-semibold uppercase tracking-wider text-primary">
-                  Signature
+                  {t("home.services.signature")}
                 </p>
                 <h3 className="mt-2 font-heading text-2xl font-bold text-foreground">
-                  Full Grooming Experience
+                  {t("home.services.full.title")}
                 </h3>
                 <p className="mt-2 max-w-md text-sm text-muted-foreground">
-                  Haircut, beard grooming, and detail work. The complete TRINQ ritual.
+                  {t("home.services.full.desc")}
                 </p>
               </div>
             </div>
@@ -167,8 +164,8 @@ function HomePage() {
               <DemoOverlay />
               <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent" />
               <div className="absolute bottom-0 left-0 z-20 p-5">
-                <h3 className="font-heading text-lg font-bold text-foreground">Skin Fade</h3>
-                <p className="mt-1 text-sm text-muted-foreground">Sharp &amp; seamless</p>
+                <h3 className="font-heading text-lg font-bold text-foreground">{t("home.services.fade.title")}</h3>
+                <p className="mt-1 text-sm text-muted-foreground">{t("home.services.fade.desc")}</p>
               </div>
             </div>
 
@@ -184,8 +181,8 @@ function HomePage() {
               <DemoOverlay />
               <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent" />
               <div className="absolute bottom-0 left-0 z-20 p-5">
-                <h3 className="font-heading text-lg font-bold text-foreground">Beard Trim</h3>
-                <p className="mt-1 text-sm text-muted-foreground">Clean &amp; defined</p>
+                <h3 className="font-heading text-lg font-bold text-foreground">{t("home.services.beard.title")}</h3>
+                <p className="mt-1 text-sm text-muted-foreground">{t("home.services.beard.desc")}</p>
               </div>
             </div>
           </div>
@@ -196,7 +193,7 @@ function HomePage() {
       <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
         <div className="text-center">
           <p className="font-heading text-sm font-semibold uppercase tracking-[0.2em] text-primary">
-            What Clients Say
+            {t("home.reviews.eyebrow")}
           </p>
           <div className="mt-4 flex items-center justify-center gap-3">
             <div className="flex gap-1">
@@ -205,23 +202,19 @@ function HomePage() {
               ))}
             </div>
             <span className="font-heading text-2xl font-bold text-foreground">5.0</span>
-            <span className="text-muted-foreground">· 6 reviews</span>
+            <span className="text-muted-foreground">· 6 {t("home.reviews")}</span>
           </div>
         </div>
         <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-3">
-          {[
-            "Clean shop, sharp cut, and great attention to detail.",
-            "Professional service and a great grooming experience.",
-            "Fresh cut, clean fade, and easy booking.",
-          ].map((quote, i) => (
+          {["home.review.1", "home.review.2", "home.review.3"].map((k, i) => (
             <div key={i} className="border border-border/50 bg-card/30 p-6">
               <div className="flex gap-0.5">
                 {Array.from({ length: 5 }).map((_, j) => (
                   <Star key={j} className="h-4 w-4 fill-primary text-primary" />
                 ))}
               </div>
-              <p className="mt-4 text-base leading-relaxed text-foreground">&ldquo;{quote}&rdquo;</p>
-              <p className="mt-4 text-xs uppercase tracking-wider text-muted-foreground">Verified Client</p>
+              <p className="mt-4 text-base leading-relaxed text-foreground">&ldquo;{t(k)}&rdquo;</p>
+              <p className="mt-4 text-xs uppercase tracking-wider text-muted-foreground">{t("home.reviews.verified")}</p>
             </div>
           ))}
         </div>
@@ -233,10 +226,10 @@ function HomePage() {
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
             <div>
               <p className="font-heading text-sm font-semibold uppercase tracking-[0.2em] text-primary">
-                Visit Us
+                {t("home.visit.eyebrow")}
               </p>
               <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-                TRINQ Barbershop
+                {t("home.visit.title")}
               </h2>
               <p className="mt-4 flex items-start gap-3 text-base text-muted-foreground">
                 <MapPin className="mt-1 h-5 w-5 shrink-0 text-primary" />
@@ -244,20 +237,20 @@ function HomePage() {
               </p>
               <div className="mt-8">
                 <h3 className="font-heading text-sm font-semibold uppercase tracking-wider text-foreground">
-                  Business Hours
+                  {t("home.visit.hours")}
                 </h3>
                 <ul className="mt-4 divide-y divide-border/50 border-y border-border/50">
                   {[
-                    ["Sunday", "Closed"],
-                    ["Monday", "9:30 AM – 8:00 PM"],
-                    ["Tuesday", "9:30 AM – 8:00 PM"],
-                    ["Wednesday", "9:30 AM – 8:00 PM"],
-                    ["Thursday", "9:30 AM – 8:00 PM"],
-                    ["Friday", "9:30 AM – 8:00 PM"],
-                    ["Saturday", "9:30 AM – 6:00 PM"],
-                  ].map(([day, hrs]) => (
-                    <li key={day} className="flex items-center justify-between py-3 text-sm">
-                      <span className="font-medium text-foreground">{day}</span>
+                    ["day.sunday", "day.closed"],
+                    ["day.monday", "9:30 AM – 8:00 PM"],
+                    ["day.tuesday", "9:30 AM – 8:00 PM"],
+                    ["day.wednesday", "9:30 AM – 8:00 PM"],
+                    ["day.thursday", "9:30 AM – 8:00 PM"],
+                    ["day.friday", "9:30 AM – 8:00 PM"],
+                    ["day.saturday", "9:30 AM – 6:00 PM"],
+                  ].map(([dayKey, hrs]) => (
+                    <li key={dayKey} className="flex items-center justify-between py-3 text-sm">
+                      <span className="font-medium text-foreground">{t(dayKey)}</span>
                       <span className="text-muted-foreground">{hrs}</span>
                     </li>
                   ))}
@@ -270,19 +263,19 @@ function HomePage() {
                   rel="noreferrer"
                   className="inline-flex items-center gap-2 rounded-md bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground hover:bg-primary/90"
                 >
-                  <Navigation className="h-4 w-4" /> Get Directions
+                  <Navigation className="h-4 w-4" /> {t("home.visit.directions")}
                 </a>
                 <a
                   href="tel:"
                   className="inline-flex items-center gap-2 rounded-md border border-border px-5 py-3 text-sm font-semibold text-foreground hover:bg-accent"
                 >
-                  <Phone className="h-4 w-4" /> Call Now
+                  <Phone className="h-4 w-4" /> {t("home.visit.call")}
                 </a>
                 <a
                   href="#book-now"
                   className="inline-flex items-center gap-2 rounded-md border border-primary/40 bg-primary/10 px-5 py-3 text-sm font-semibold text-primary hover:bg-primary/20"
                 >
-                  Book Now
+                  {t("nav.book")}
                 </a>
               </div>
             </div>
@@ -302,16 +295,14 @@ function HomePage() {
       <section id="book-now" className="bg-primary/10">
         <div className="mx-auto max-w-7xl px-4 py-16 text-center sm:px-6 lg:px-8">
           <h2 className="font-heading text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-            Ready for your next cut?
+            {t("cta.title")}
           </h2>
-          <p className="mx-auto mt-4 max-w-xl text-muted-foreground">
-            Book your appointment today and experience premium barbering in Windermere.
-          </p>
+          <p className="mx-auto mt-4 max-w-xl text-muted-foreground">{t("cta.desc")}</p>
           <a
             href="#book-now"
             className="mt-8 inline-flex items-center gap-2 rounded-md bg-primary px-8 py-4 text-base font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
           >
-            Book Your Appointment
+            {t("cta.button")}
             <ArrowRight className="h-5 w-5" />
           </a>
         </div>
