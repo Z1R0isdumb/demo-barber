@@ -6,25 +6,25 @@ import barber3 from "../assets/barber-3.jpg";
 
 const barbers = [
   {
-    name: "Marcus Johnson",
-    title: "Master Barber",
+    name: "Master Barber",
+    title: "TRINQ Team",
     image: barber1,
-    bio: "With 12 years behind the chair, Marcus has built a reputation for razor-sharp fades and immaculate beard sculpting. His clients trust him implicitly — and they keep coming back.",
-    specialties: ["Fades", "Beard Sculpting", "Textured Cuts"],
+    bio: "A dedicated craftsman specializing in precision fades, classic cuts, and detail work. Every client leaves looking sharp.",
+    specialties: ["Skin Fades", "Classic Cuts", "Line Ups"],
   },
   {
-    name: 'David "Razor" Cole',
-    title: "Senior Barber",
+    name: "Barber",
+    title: "TRINQ Team",
     image: barber2,
-    bio: "Fifteen years of experience and a nickname earned honestly. David is our straight-razor specialist, delivering the smoothest hot towel shaves this side of the Thames.",
-    specialties: ["Hot Towel Shaves", "Classic Cuts", "Gray Blending"],
+    bio: "Focused on clean, modern styles and a smooth chair-side experience. Every service is tailored to the client.",
+    specialties: ["Modern Styles", "Beard Trims", "Hot Towel Shaves"],
   },
   {
-    name: "Antonio Reyes",
-    title: "Stylist",
+    name: "Grooming Specialist",
+    title: "TRINQ Team",
     image: barber3,
-    bio: "Antonio brings a fresh perspective to the shop. With 8 years of experience in modern styling and color work, he is the go-to for men who want to push boundaries.",
-    specialties: ["Modern Styles", "Hair Color", "Creative Fades"],
+    bio: "Beard sculpting and full grooming are the specialty. Every detail matters — from the first cut to the final touch.",
+    specialties: ["Beard Grooming", "Full Grooming", "Kids Cuts"],
   },
 ];
 
@@ -32,10 +32,10 @@ export const Route = createFileRoute("/barbers")({
   component: BarbersPage,
   head: () => ({
     meta: [
-      { title: "Our Barbers — Gold & Blade" },
-      { name: "description", content: "Meet the master barbers behind Gold & Blade. Marcus Johnson, David Cole, and Antonio Reyes — craftsmen dedicated to the art of grooming." },
-      { property: "og:title", content: "Our Barbers — Gold & Blade" },
-      { property: "og:description", content: "Meet the master barbers behind Gold & Blade. Marcus Johnson, David Cole, and Antonio Reyes — craftsmen dedicated to the art of grooming." },
+      { title: "Our Barbers — TRINQ Barbershop" },
+      { name: "description", content: "Meet the TRINQ Barbershop team — barbers and grooming specialists delivering premium cuts in Windermere, FL." },
+      { property: "og:title", content: "Our Barbers — TRINQ Barbershop" },
+      { property: "og:description", content: "Meet the TRINQ Barbershop team — barbers and grooming specialists delivering premium cuts in Windermere, FL." },
     ],
   }),
 });
@@ -53,8 +53,8 @@ function BarbersPage() {
             Our Barbers
           </h1>
           <p className="mt-4 max-w-2xl text-lg text-muted-foreground">
-            Every barber at Gold &amp; Blade is a craftsman. Years of experience,
-            an eye for detail, and a passion for the trade.
+            Every barber at TRINQ is a craftsman — dedicated to precision, style, and
+            delivering a premium grooming experience.
           </p>
         </div>
       </section>

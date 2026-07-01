@@ -9,24 +9,24 @@ import serviceBeard from "../assets/service-beard.jpg";
 import serviceTreatment from "../assets/service-treatment.jpg";
 
 const galleryItems = [
-  { src: heroBarbershop, alt: "Barbershop interior", label: "Interior", span: "md:col-span-2 md:row-span-2" },
-  { src: galleryHaircut, alt: "Styled haircut result", label: "Styles", span: "" },
-  { src: serviceHaircut, alt: "Precision fade haircut", label: "Haircuts", span: "md:col-span-2" },
-  { src: galleryLounge, alt: "Waiting lounge", label: "Atmosphere", span: "" },
-  { src: serviceShave, alt: "Hot towel shave", label: "Shaves", span: "" },
-  { src: galleryTools, alt: "Premium barber tools", label: "Tools", span: "" },
-  { src: serviceBeard, alt: "Beard sculpting", label: "Beards", span: "md:col-span-2" },
-  { src: serviceTreatment, alt: "Hair treatment", label: "Treatments", span: "" },
+  { src: heroBarbershop, alt: "Barbershop atmosphere", label: "Atmosphere", span: "md:col-span-2 md:row-span-2" },
+  { src: galleryHaircut, alt: "Modern style", label: "Modern Styles", span: "" },
+  { src: serviceHaircut, alt: "Skin fade", label: "Fades", span: "md:col-span-2" },
+  { src: galleryLounge, alt: "Shop atmosphere", label: "Shop", span: "" },
+  { src: serviceShave, alt: "Clean lineup", label: "Lineups", span: "" },
+  { src: galleryTools, alt: "Barber tools", label: "Craft", span: "" },
+  { src: serviceBeard, alt: "Beard grooming", label: "Beards", span: "md:col-span-2" },
+  { src: serviceTreatment, alt: "Classic cut", label: "Classic Cuts", span: "" },
 ];
 
 export const Route = createFileRoute("/gallery")({
   component: GalleryPage,
   head: () => ({
     meta: [
-      { title: "Gallery — Gold & Blade" },
-      { name: "description", content: "Browse our gallery of premium haircuts, hot towel shaves, beard sculpting, and the refined atmosphere of Gold & Blade." },
-      { property: "og:title", content: "Gallery — Gold & Blade" },
-      { property: "og:description", content: "Browse our gallery of premium haircuts, hot towel shaves, beard sculpting, and the refined atmosphere of Gold & Blade." },
+      { title: "Gallery — TRINQ Barbershop" },
+      { name: "description", content: "Fades, beard grooming, classic cuts, modern styles, clean lineups, and the atmosphere of TRINQ Barbershop in Windermere, FL." },
+      { property: "og:title", content: "Gallery — TRINQ Barbershop" },
+      { property: "og:description", content: "Fades, beard grooming, classic cuts, modern styles, clean lineups, and the atmosphere of TRINQ Barbershop in Windermere, FL." },
     ],
   }),
 });
@@ -44,8 +44,8 @@ function GalleryPage() {
             Gallery
           </h1>
           <p className="mt-4 max-w-2xl text-lg text-muted-foreground">
-            A glimpse into the world of Gold &amp; Blade — the cuts, the craft,
-            and the atmosphere that defines us.
+            Fades, beard grooming, classic cuts, modern styles, clean lineups, and the
+            atmosphere that defines TRINQ Barbershop.
           </p>
         </div>
       </section>
