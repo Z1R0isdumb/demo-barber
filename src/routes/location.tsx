@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { MapPin, Phone, Navigation, Clock } from "lucide-react";
+import { useI18n } from "../lib/i18n";
 
 export const Route = createFileRoute("/location")({
   component: LocationPage,
@@ -14,29 +15,28 @@ export const Route = createFileRoute("/location")({
 });
 
 const hours: [string, string][] = [
-  ["Sunday", "Closed"],
-  ["Monday", "9:30 AM – 8:00 PM"],
-  ["Tuesday", "9:30 AM – 8:00 PM"],
-  ["Wednesday", "9:30 AM – 8:00 PM"],
-  ["Thursday", "9:30 AM – 8:00 PM"],
-  ["Friday", "9:30 AM – 8:00 PM"],
-  ["Saturday", "9:30 AM – 6:00 PM"],
+  ["day.sunday", "day.closed"],
+  ["day.monday", "9:30 AM – 8:00 PM"],
+  ["day.tuesday", "9:30 AM – 8:00 PM"],
+  ["day.wednesday", "9:30 AM – 8:00 PM"],
+  ["day.thursday", "9:30 AM – 8:00 PM"],
+  ["day.friday", "9:30 AM – 8:00 PM"],
+  ["day.saturday", "9:30 AM – 6:00 PM"],
 ];
 
 function LocationPage() {
+  const { t } = useI18n();
   return (
     <main className="flex-1">
       <section className="border-b border-border/50 bg-card/30">
         <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
           <p className="font-heading text-sm font-semibold uppercase tracking-[0.2em] text-primary">
-            Find Us
+            {t("location.eyebrow")}
           </p>
           <h1 className="mt-3 font-heading text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
-            Location &amp; Hours
+            {t("location.title")}
           </h1>
-          <p className="mt-4 max-w-2xl text-lg text-muted-foreground">
-            TRINQ Barbershop is located in Windermere, Florida. Walk in or book ahead.
-          </p>
+          <p className="mt-4 max-w-2xl text-lg text-muted-foreground">{t("location.desc")}</p>
         </div>
       </section>
 
@@ -48,7 +48,7 @@ function LocationPage() {
               <div className="flex items-start gap-3">
                 <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
                 <div>
-                  <p className="text-sm font-medium text-foreground">Address</p>
+                  <p className="text-sm font-medium text-foreground">{t("location.address")}</p>
                   <p className="text-sm text-muted-foreground">
                     6536 Old Brick Rd Unit 110, Suite 6<br />Windermere, FL 34786
                   </p>
@@ -57,12 +57,14 @@ function LocationPage() {
               <div className="flex items-start gap-3">
                 <Clock className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
                 <div className="w-full">
-                  <p className="text-sm font-medium text-foreground">Business Hours</p>
+                  <p className="text-sm font-medium text-foreground">{t("home.visit.hours")}</p>
                   <ul className="mt-2 divide-y divide-border/50 border-y border-border/50">
-                    {hours.map(([day, hrs]) => (
-                      <li key={day} className="flex items-center justify-between py-2.5 text-sm">
-                        <span className="font-medium text-foreground">{day}</span>
-                        <span className="text-muted-foreground">{hrs}</span>
+                    {hours.map(([dayKey, hrs]) => (
+                      <li key={dayKey} className="flex items-center justify-between py-2.5 text-sm">
+                        <span className="font-medium text-foreground">{t(dayKey)}</span>
+                        <span className="text-muted-foreground">
+                          {hrs.startsWith("day.") ? t(hrs) : hrs}
+                        </span>
                       </li>
                     ))}
                   </ul>
@@ -77,19 +79,19 @@ function LocationPage() {
                 rel="noreferrer"
                 className="inline-flex items-center gap-2 rounded-md bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground hover:bg-primary/90"
               >
-                <Navigation className="h-4 w-4" /> Get Directions
+                <Navigation className="h-4 w-4" /> {t("home.visit.directions")}
               </a>
               <a
                 href="tel:"
                 className="inline-flex items-center gap-2 rounded-md border border-border px-5 py-3 text-sm font-semibold text-foreground hover:bg-accent"
               >
-                <Phone className="h-4 w-4" /> Call Now
+                <Phone className="h-4 w-4" /> {t("home.visit.call")}
               </a>
               <a
                 href="#book-now"
                 className="inline-flex items-center gap-2 rounded-md border border-primary/40 bg-primary/10 px-5 py-3 text-sm font-semibold text-primary hover:bg-primary/20"
               >
-                Book Now
+                {t("nav.book")}
               </a>
             </div>
           </div>
@@ -108,16 +110,14 @@ function LocationPage() {
       <section id="book-now" className="bg-primary/10">
         <div className="mx-auto max-w-7xl px-4 py-16 text-center sm:px-6 lg:px-8">
           <h2 className="font-heading text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-            Ready for your next cut?
+            {t("cta.title")}
           </h2>
-          <p className="mx-auto mt-4 max-w-xl text-muted-foreground">
-            Book your appointment today and experience premium barbering in Windermere.
-          </p>
+          <p className="mx-auto mt-4 max-w-xl text-muted-foreground">{t("cta.desc")}</p>
           <a
             href="#book-now"
             className="mt-8 inline-flex items-center gap-2 rounded-md bg-primary px-8 py-4 text-base font-semibold text-primary-foreground hover:bg-primary/90"
           >
-            Book Your Appointment
+            {t("cta.button")}
           </a>
         </div>
       </section>
