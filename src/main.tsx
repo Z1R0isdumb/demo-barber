@@ -9,7 +9,7 @@ import "./styles.css";
 const queryClient = new QueryClient();
 
 // Must match the Vite `base` (without trailing slash for react-router).
-const basename = "/sharp-cuts-online-79";
+const basename = "/demo-barber";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
