@@ -10,8 +10,8 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as ServicesRouteImport } from './routes/services'
+import { Route as LocationRouteImport } from './routes/location'
 import { Route as GalleryRouteImport } from './routes/gallery'
-import { Route as BookingRouteImport } from './routes/booking'
 import { Route as BarbersRouteImport } from './routes/barbers'
 import { Route as IndexRouteImport } from './routes/index'
 
@@ -20,14 +20,14 @@ const ServicesRoute = ServicesRouteImport.update({
   path: '/services',
   getParentRoute: () => rootRouteImport,
 } as any)
+const LocationRoute = LocationRouteImport.update({
+  id: '/location',
+  path: '/location',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const GalleryRoute = GalleryRouteImport.update({
   id: '/gallery',
   path: '/gallery',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const BookingRoute = BookingRouteImport.update({
-  id: '/booking',
-  path: '/booking',
   getParentRoute: () => rootRouteImport,
 } as any)
 const BarbersRoute = BarbersRouteImport.update({
@@ -44,38 +44,38 @@ const IndexRoute = IndexRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/barbers': typeof BarbersRoute
-  '/booking': typeof BookingRoute
   '/gallery': typeof GalleryRoute
+  '/location': typeof LocationRoute
   '/services': typeof ServicesRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/barbers': typeof BarbersRoute
-  '/booking': typeof BookingRoute
   '/gallery': typeof GalleryRoute
+  '/location': typeof LocationRoute
   '/services': typeof ServicesRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/barbers': typeof BarbersRoute
-  '/booking': typeof BookingRoute
   '/gallery': typeof GalleryRoute
+  '/location': typeof LocationRoute
   '/services': typeof ServicesRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/barbers' | '/booking' | '/gallery' | '/services'
+  fullPaths: '/' | '/barbers' | '/gallery' | '/location' | '/services'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/barbers' | '/booking' | '/gallery' | '/services'
-  id: '__root__' | '/' | '/barbers' | '/booking' | '/gallery' | '/services'
+  to: '/' | '/barbers' | '/gallery' | '/location' | '/services'
+  id: '__root__' | '/' | '/barbers' | '/gallery' | '/location' | '/services'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   BarbersRoute: typeof BarbersRoute
-  BookingRoute: typeof BookingRoute
   GalleryRoute: typeof GalleryRoute
+  LocationRoute: typeof LocationRoute
   ServicesRoute: typeof ServicesRoute
 }
 
@@ -88,18 +88,18 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/location': {
+      id: '/location'
+      path: '/location'
+      fullPath: '/location'
+      preLoaderRoute: typeof LocationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/gallery': {
       id: '/gallery'
       path: '/gallery'
       fullPath: '/gallery'
       preLoaderRoute: typeof GalleryRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/booking': {
-      id: '/booking'
-      path: '/booking'
-      fullPath: '/booking'
-      preLoaderRoute: typeof BookingRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/barbers': {
@@ -122,8 +122,8 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   BarbersRoute: BarbersRoute,
-  BookingRoute: BookingRoute,
   GalleryRoute: GalleryRoute,
+  LocationRoute: LocationRoute,
   ServicesRoute: ServicesRoute,
 }
 export const routeTree = rootRouteImport

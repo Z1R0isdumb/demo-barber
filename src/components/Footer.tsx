@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Scissors, MapPin, Phone, Clock, Instagram, Facebook } from "lucide-react";
+import { Scissors, MapPin, Clock, Instagram, Facebook } from "lucide-react";
 
 export function Footer() {
   return (
@@ -10,11 +10,11 @@ export function Footer() {
             <Link to="/" className="flex items-center gap-2">
               <Scissors className="h-5 w-5 text-primary" />
               <span className="font-heading text-base font-bold tracking-tight">
-                GOLD <span className="text-primary">&amp;</span> BLADE
+                TRIN<span className="text-primary">Q</span> BARBERSHOP
               </span>
             </Link>
             <p className="mt-4 text-sm text-muted-foreground">
-              Where craft meets style. Premium grooming for the modern gentleman since 2012.
+              Premium barbering in Windermere, Florida.
             </p>
             <div className="mt-4 flex gap-4">
               <a href="#" className="text-muted-foreground transition-colors hover:text-primary" aria-label="Instagram">
@@ -28,17 +28,24 @@ export function Footer() {
 
           <div>
             <h3 className="font-heading text-sm font-semibold uppercase tracking-wider text-foreground">
-              Contact
+              Visit
             </h3>
             <ul className="mt-4 space-y-3">
               <li className="flex items-start gap-3 text-sm text-muted-foreground">
                 <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
-                <span>42 Bond Street, Mayfair<br />London W1S 1DE</span>
+                <span>6536 Old Brick Rd Unit 110, Suite 6<br />Windermere, FL 34786</span>
               </li>
-              <li className="flex items-center gap-3 text-sm text-muted-foreground">
-                <Phone className="h-4 w-4 shrink-0 text-primary" />
-                <span>+44 20 7946 0958</span>
-              </li>
+            </ul>
+            <h3 className="mt-6 font-heading text-sm font-semibold uppercase tracking-wider text-foreground">
+              Quick Links
+            </h3>
+            <ul className="mt-4 grid grid-cols-2 gap-2 text-sm">
+              <li><Link to="/" className="text-muted-foreground hover:text-primary">Home</Link></li>
+              <li><Link to="/services" className="text-muted-foreground hover:text-primary">Services</Link></li>
+              <li><Link to="/barbers" className="text-muted-foreground hover:text-primary">Barbers</Link></li>
+              <li><Link to="/gallery" className="text-muted-foreground hover:text-primary">Gallery</Link></li>
+              <li><Link to="/location" className="text-muted-foreground hover:text-primary">Location</Link></li>
+              <li><a href="#book-now" className="text-primary hover:text-primary/80">Book Now</a></li>
             </ul>
           </div>
 
@@ -46,26 +53,17 @@ export function Footer() {
             <h3 className="font-heading text-sm font-semibold uppercase tracking-wider text-foreground">
               Hours
             </h3>
-            <ul className="mt-4 space-y-2">
-              <li className="flex items-center gap-3 text-sm text-muted-foreground">
-                <Clock className="h-4 w-4 shrink-0 text-primary" />
-                <span>Mon–Fri: 9:00 AM – 8:00 PM</span>
-              </li>
-              <li className="flex items-center gap-3 text-sm text-muted-foreground">
-                <Clock className="h-4 w-4 shrink-0 text-primary" />
-                <span>Saturday: 9:00 AM – 6:00 PM</span>
-              </li>
-              <li className="flex items-center gap-3 text-sm text-muted-foreground">
-                <Clock className="h-4 w-4 shrink-0 text-primary" />
-                <span>Sunday: 10:00 AM – 4:00 PM</span>
-              </li>
+            <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
+              <li className="flex items-center gap-3"><Clock className="h-4 w-4 shrink-0 text-primary" /><span>Sunday: Closed</span></li>
+              <li className="flex items-center gap-3"><Clock className="h-4 w-4 shrink-0 text-primary" /><span>Mon – Fri: 9:30 AM – 8:00 PM</span></li>
+              <li className="flex items-center gap-3"><Clock className="h-4 w-4 shrink-0 text-primary" /><span>Saturday: 9:30 AM – 6:00 PM</span></li>
             </ul>
           </div>
         </div>
 
         <div className="mt-12 border-t border-border/50 pt-8 text-center">
           <p className="text-xs text-muted-foreground">
-            &copy; {new Date().getFullYear()} Gold &amp; Blade. All rights reserved.
+            &copy; {new Date().getFullYear()} TRINQ Barbershop. All rights reserved.
           </p>
         </div>
       </div>

@@ -5,28 +5,24 @@ const services = [
   {
     category: "Haircuts",
     items: [
-      { name: "Classic Cut", price: "$45", duration: "30 min", description: "A timeless, tailored cut suited to your face shape and style." },
-      { name: "Fade & Blend", price: "$50", duration: "35 min", description: "Precision fading with seamless blending for a sharp, modern look." },
-      { name: "Buzz Cut", price: "$30", duration: "20 min", description: "Clean, uniform length all over — bold and effortless." },
-      { name: "Long Hair Trim", price: "$55", duration: "40 min", description: "Shape and maintenance for longer styles without sacrificing length." },
+      { name: "Men's Haircut", price: "Starting at —", description: "A tailored cut suited to your style, face shape, and preference." },
+      { name: "Skin Fade", price: "Starting at —", description: "Precision fade taken down to the skin for a sharp, modern finish." },
+      { name: "Line Up / Shape Up", price: "Starting at —", description: "Crisp edges and clean lines to keep your look sharp between cuts." },
+      { name: "Kids Cut", price: "Starting at —", description: "A relaxed, quick, and clean cut for the younger clients." },
     ],
   },
   {
     category: "Beard & Shave",
     items: [
-      { name: "Hot Towel Shave", price: "$45", duration: "30 min", description: "Straight razor shave with hot towel preparation for the smoothest finish." },
-      { name: "Beard Trim", price: "$30", duration: "20 min", description: "Neat shaping and cleanup to keep your beard looking intentional." },
-      { name: "Beard Sculpting", price: "$40", duration: "25 min", description: "Artistic shaping to define jawlines and create bold silhouettes." },
-      { name: "Mustache Trim", price: "$15", duration: "10 min", description: "Detailed grooming for a sharp, distinguished mustache." },
+      { name: "Beard Trim", price: "Starting at —", description: "Neat shaping and cleanup to keep your beard looking intentional." },
+      { name: "Hot Towel Shave", price: "Starting at —", description: "Straight razor shave with hot towel prep for the smoothest finish." },
     ],
   },
   {
-    category: "Treatments",
+    category: "Signature Combos",
     items: [
-      { name: "Hair Wash & Style", price: "$35", duration: "25 min", description: "Deep cleanse followed by a professional blow-dry and style." },
-      { name: "Scalp Treatment", price: "$50", duration: "30 min", description: "Nourishing treatment to refresh the scalp and promote healthy hair." },
-      { name: "Hair Coloring", price: "$75+", duration: "60 min", description: "From subtle grays coverage to bold statement colors." },
-      { name: "Facial Treatment", price: "$60", duration: "45 min", description: "Cleansing, exfoliation, and moisturization for refreshed skin." },
+      { name: "Haircut & Beard", price: "Starting at —", description: "The full refresh — precision cut paired with detailed beard grooming." },
+      { name: "Full Grooming Experience", price: "Starting at —", description: "Haircut, beard, hot towel, and detail work. The complete TRINQ ritual." },
     ],
   },
 ];
@@ -35,10 +31,10 @@ export const Route = createFileRoute("/services")({
   component: ServicesPage,
   head: () => ({
     meta: [
-      { title: "Services & Pricing — Gold & Blade" },
-      { name: "description", content: "Explore our full menu of premium grooming services. Haircuts, hot towel shaves, beard sculpting, and treatments at Gold & Blade." },
-      { property: "og:title", content: "Services & Pricing — Gold & Blade" },
-      { property: "og:description", content: "Explore our full menu of premium grooming services. Haircuts, hot towel shaves, beard sculpting, and treatments at Gold & Blade." },
+      { title: "Services — TRINQ Barbershop" },
+      { name: "description", content: "Men's haircuts, skin fades, beard trims, line ups, hot towel shaves, and full grooming at TRINQ Barbershop in Windermere, FL." },
+      { property: "og:title", content: "Services — TRINQ Barbershop" },
+      { property: "og:description", content: "Men's haircuts, skin fades, beard trims, line ups, hot towel shaves, and full grooming at TRINQ Barbershop in Windermere, FL." },
     ],
   }),
 });
@@ -53,11 +49,11 @@ function ServicesPage() {
             What We Do
           </p>
           <h1 className="mt-3 font-heading text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
-            Services &amp; Pricing
+            Services
           </h1>
           <p className="mt-4 max-w-2xl text-lg text-muted-foreground">
-            Every service is delivered with precision, care, and the attention to detail
-            that has defined Gold &amp; Blade for over a decade.
+            Every service at TRINQ is delivered with precision, care, and the attention to
+            detail that defines a premium barbering experience.
           </p>
         </div>
       </section>
@@ -92,13 +88,23 @@ function ServicesPage() {
                     </div>
                     <div className="mt-4 flex items-center gap-2 text-xs text-muted-foreground">
                       <Clock className="h-3.5 w-3.5" />
-                      <span>{item.duration}</span>
+                      <span>By appointment</span>
                     </div>
                   </div>
                 ))}
               </div>
             </div>
           ))}
+        </div>
+      </section>
+      <section className="mx-auto max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
+        <div className="border-t border-border/50 pt-10 text-center">
+          <a
+            href="#book-now"
+            className="inline-flex items-center gap-2 rounded-md bg-primary px-8 py-4 text-base font-semibold text-primary-foreground hover:bg-primary/90"
+          >
+            Book Your Appointment
+          </a>
         </div>
       </section>
     </main>

@@ -79,14 +79,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Gold & Blade — Premium Barbershop" },
-      { name: "description", content: "Experience the art of grooming at Gold & Blade. Premium haircuts, hot towel shaves, and beard sculpting in an atmosphere of refined masculinity." },
-      { name: "author", content: "Gold & Blade" },
-      { property: "og:title", content: "Gold & Blade — Premium Barbershop" },
-      { property: "og:description", content: "Experience the art of grooming at Gold & Blade. Premium haircuts, hot towel shaves, and beard sculpting in an atmosphere of refined masculinity." },
+      { title: "TRINQ Barbershop — Premium Barbering in Windermere, FL" },
+      { name: "description", content: "TRINQ Barbershop in Windermere, Florida. Precision cuts, clean fades, beard grooming, and personalized service." },
+      { name: "author", content: "TRINQ Barbershop" },
+      { property: "og:title", content: "TRINQ Barbershop — Premium Barbering in Windermere, FL" },
+      { property: "og:description", content: "TRINQ Barbershop in Windermere, Florida. Precision cuts, clean fades, beard grooming, and personalized service." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@goldandblade" },
+      { name: "twitter:site", content: "@trinqbarbershop" },
     ],
     links: [
       {

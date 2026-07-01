@@ -7,7 +7,7 @@ const navLinks = [
   { to: "/services", label: "Services" },
   { to: "/barbers", label: "Barbers" },
   { to: "/gallery", label: "Gallery" },
-  { to: "/booking", label: "Book" },
+  { to: "/location", label: "Location" },
 ];
 
 export function Header() {
@@ -19,7 +19,7 @@ export function Header() {
         <Link to="/" className="flex items-center gap-2 transition-opacity hover:opacity-80">
           <Scissors className="h-6 w-6 text-primary" />
           <span className="font-heading text-lg font-bold tracking-tight text-foreground">
-            GOLD <span className="text-primary">&amp;</span> BLADE
+            TRIN<span className="text-primary">Q</span> BARBERSHOP
           </span>
         </Link>
 
@@ -36,12 +36,12 @@ export function Header() {
           ))}
         </nav>
 
-        <Link
-          to="/booking"
+        <a
+          href="#book-now"
           className="hidden rounded-md bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90 md:inline-flex"
         >
           Book Now
-        </Link>
+        </a>
 
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
@@ -66,13 +66,13 @@ export function Header() {
                 {link.label}
               </Link>
             ))}
-            <Link
-              to="/booking"
+            <a
+              href="#book-now"
               onClick={() => setMobileOpen(false)}
               className="mt-2 rounded-md bg-primary px-4 py-3 text-center text-sm font-semibold text-primary-foreground"
             >
               Book Now
-            </Link>
+            </a>
           </nav>
         </div>
       )}
