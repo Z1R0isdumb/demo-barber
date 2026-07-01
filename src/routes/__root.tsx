@@ -13,6 +13,7 @@ import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
+import { I18nProvider } from "../lib/i18n";
 
 function NotFoundComponent() {
   return (
@@ -124,11 +125,13 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <div className="flex min-h-screen flex-col">
-        <Header />
-        <Outlet />
-        <Footer />
-      </div>
+      <I18nProvider>
+        <div className="flex min-h-screen flex-col">
+          <Header />
+          <Outlet />
+          <Footer />
+        </div>
+      </I18nProvider>
     </QueryClientProvider>
   );
 }

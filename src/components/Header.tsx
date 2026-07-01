@@ -1,17 +1,20 @@
 import { useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { Menu, X, Scissors } from "lucide-react";
+import { useI18n } from "../lib/i18n";
+import { LanguageToggle } from "./LanguageToggle";
 
 const navLinks = [
-  { to: "/", label: "Home" },
-  { to: "/services", label: "Services" },
-  { to: "/barbers", label: "Barbers" },
-  { to: "/gallery", label: "Gallery" },
-  { to: "/location", label: "Location" },
+  { to: "/", key: "nav.home" },
+  { to: "/services", key: "nav.services" },
+  { to: "/barbers", key: "nav.barbers" },
+  { to: "/gallery", key: "nav.gallery" },
+  { to: "/location", key: "nav.location" },
 ];
 
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const { t } = useI18n();
 
   return (
     <header className="sticky top-0 z-50 border-b border-border/50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -31,25 +34,31 @@ export function Header() {
               activeProps={{ className: "text-primary" }}
               className="rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
             >
-              {link.label}
+              {t(link.key)}
             </Link>
           ))}
         </nav>
 
-        <a
-          href="#book-now"
-          className="hidden rounded-md bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90 md:inline-flex"
-        >
-          Book Now
-        </a>
+        <div className="hidden items-center gap-3 md:flex">
+          <LanguageToggle />
+          <a
+            href="#book-now"
+            className="rounded-md bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
+          >
+            {t("nav.book")}
+          </a>
+        </div>
 
-        <button
-          onClick={() => setMobileOpen(!mobileOpen)}
-          className="inline-flex items-center justify-center rounded-md p-2 text-muted-foreground hover:text-foreground md:hidden"
-          aria-label="Toggle menu"
-        >
-          {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-        </button>
+        <div className="flex items-center gap-2 md:hidden">
+          <LanguageToggle />
+          <button
+            onClick={() => setMobileOpen(!mobileOpen)}
+            className="inline-flex items-center justify-center rounded-md p-2 text-muted-foreground hover:text-foreground"
+            aria-label="Toggle menu"
+          >
+            {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          </button>
+        </div>
       </div>
 
       {mobileOpen && (
@@ -63,7 +72,7 @@ export function Header() {
                 activeProps={{ className: "text-primary" }}
                 className="rounded-md px-3 py-2 text-base font-medium text-muted-foreground transition-colors hover:text-foreground"
               >
-                {link.label}
+                {t(link.key)}
               </Link>
             ))}
             <a
@@ -71,7 +80,7 @@ export function Header() {
               onClick={() => setMobileOpen(false)}
               className="mt-2 rounded-md bg-primary px-4 py-3 text-center text-sm font-semibold text-primary-foreground"
             >
-              Book Now
+              {t("nav.book")}
             </a>
           </nav>
         </div>
