@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { useEffect } from "react";
 import { Scissors, Star, ArrowRight } from "lucide-react";
 import { BarberSilhouette } from "../components/BarberSilhouette";
 import { DemoOverlay } from "../components/DemoOverlay";
@@ -21,20 +21,11 @@ const barbers = [
   },
 ];
 
-export const Route = createFileRoute("/barbers")({
-  component: BarbersPage,
-  head: () => ({
-    meta: [
-      { title: "Our Barbers — TRINQ Barbershop" },
-      { name: "description", content: "Meet the TRINQ Barbershop team — barbers and grooming specialists delivering premium cuts in Windermere, FL." },
-      { property: "og:title", content: "Our Barbers — TRINQ Barbershop" },
-      { property: "og:description", content: "Meet the TRINQ Barbershop team — barbers and grooming specialists delivering premium cuts in Windermere, FL." },
-    ],
-  }),
-});
-
-function BarbersPage() {
+export default function BarbersPage() {
   const { t } = useI18n();
+  useEffect(() => {
+    document.title = "Our Barbers — TRINQ Barbershop";
+  }, []);
   return (
     <main className="flex-1">
       {/* Page Header */}
