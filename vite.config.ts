@@ -4,7 +4,7 @@ import tailwindcss from "@tailwindcss/vite";
 import tsconfigPaths from "vite-tsconfig-paths";
 
 // GitHub Pages base path — matches the repo name.
-const BASE = "/sharp-cuts-online-79/";
+const BASE = "/demo-barber/";
 
 export default defineConfig({
   base: BASE,
