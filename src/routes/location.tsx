@@ -1,18 +1,6 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { useEffect } from "react";
 import { MapPin, Phone, Navigation, Clock } from "lucide-react";
 import { useI18n } from "../lib/i18n";
-
-export const Route = createFileRoute("/location")({
-  component: LocationPage,
-  head: () => ({
-    meta: [
-      { title: "Location & Hours — TRINQ Barbershop" },
-      { name: "description", content: "Visit TRINQ Barbershop at 6536 Old Brick Rd Unit 110, Suite 6, Windermere, FL 34786. Directions, hours, and booking." },
-      { property: "og:title", content: "Location & Hours — TRINQ Barbershop" },
-      { property: "og:description", content: "Visit TRINQ Barbershop at 6536 Old Brick Rd Unit 110, Suite 6, Windermere, FL 34786." },
-    ],
-  }),
-});
 
 const hours: [string, string][] = [
   ["day.sunday", "day.closed"],
@@ -24,8 +12,11 @@ const hours: [string, string][] = [
   ["day.saturday", "9:30 AM – 6:00 PM"],
 ];
 
-function LocationPage() {
+export default function LocationPage() {
   const { t } = useI18n();
+  useEffect(() => {
+    document.title = "Location & Hours — TRINQ Barbershop";
+  }, []);
   return (
     <main className="flex-1">
       <section className="border-b border-border/50 bg-card/30">

@@ -1,4 +1,5 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { useEffect } from "react";
+import { Link } from "react-router-dom";
 import { ArrowRight, Star, MapPin, Phone, Navigation } from "lucide-react";
 import { DemoOverlay } from "../components/DemoOverlay";
 import { useI18n } from "../lib/i18n";
@@ -7,20 +8,11 @@ import serviceHaircut from "../assets/service-haircut.jpg";
 import serviceShave from "../assets/service-shave.jpg";
 import serviceBeard from "../assets/service-beard.jpg";
 
-export const Route = createFileRoute("/")({
-  component: HomePage,
-  head: () => ({
-    meta: [
-      { title: "TRINQ Barbershop — Premium Barbering in Windermere, FL" },
-      { name: "description", content: "TRINQ Barbershop in Windermere, Florida. Precision cuts, clean fades, beard grooming, and personalized service." },
-      { property: "og:title", content: "TRINQ Barbershop — Premium Barbering in Windermere, FL" },
-      { property: "og:description", content: "TRINQ Barbershop in Windermere, Florida. Precision cuts, clean fades, beard grooming, and personalized service." },
-    ],
-  }),
-});
-
-function HomePage() {
+export default function HomePage() {
   const { t } = useI18n();
+  useEffect(() => {
+    document.title = "TRINQ Barbershop — Premium Barbering in Windermere, FL";
+  }, []);
   return (
     <main className="flex-1">
       {/* Hero */}

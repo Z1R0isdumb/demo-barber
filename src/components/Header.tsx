@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "@tanstack/react-router";
+import { Link, NavLink } from "react-router-dom";
 import { Menu, X, Scissors } from "lucide-react";
 import { useI18n } from "../lib/i18n";
 import { LanguageToggle } from "./LanguageToggle";
@@ -28,14 +28,18 @@ export function Header() {
 
         <nav className="hidden items-center gap-1 md:flex">
           {navLinks.map((link) => (
-            <Link
+            <NavLink
               key={link.to}
               to={link.to}
-              activeProps={{ className: "text-primary" }}
-              className="rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+              end={link.to === "/"}
+              className={({ isActive }) =>
+                `rounded-md px-3 py-2 text-sm font-medium transition-colors hover:text-foreground ${
+                  isActive ? "text-primary" : "text-muted-foreground"
+                }`
+              }
             >
               {t(link.key)}
-            </Link>
+            </NavLink>
           ))}
         </nav>
 
@@ -65,15 +69,19 @@ export function Header() {
         <div className="border-t border-border/50 bg-background px-4 py-4 md:hidden">
           <nav className="flex flex-col gap-2">
             {navLinks.map((link) => (
-              <Link
+              <NavLink
                 key={link.to}
                 to={link.to}
+                end={link.to === "/"}
                 onClick={() => setMobileOpen(false)}
-                activeProps={{ className: "text-primary" }}
-                className="rounded-md px-3 py-2 text-base font-medium text-muted-foreground transition-colors hover:text-foreground"
+                className={({ isActive }) =>
+                  `rounded-md px-3 py-2 text-base font-medium transition-colors hover:text-foreground ${
+                    isActive ? "text-primary" : "text-muted-foreground"
+                  }`
+                }
               >
                 {t(link.key)}
-              </Link>
+              </NavLink>
             ))}
             <a
               href="https://www.vagaro.com/trinqbarbershop/book-now" target="_blank" rel="noopener noreferrer"

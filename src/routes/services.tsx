@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { useEffect } from "react";
 import { ArrowRight } from "lucide-react";
 import { useI18n } from "../lib/i18n";
 
@@ -16,20 +16,11 @@ const services: { id: string; price: string }[] = [
   { id: "lights", price: "From $100" },
 ];
 
-export const Route = createFileRoute("/services")({
-  component: ServicesPage,
-  head: () => ({
-    meta: [
-      { title: "Services — TRINQ Barbershop" },
-      { name: "description", content: "Men's haircuts, skin fades, beard trims, line ups, hot towel shaves, and full grooming at TRINQ Barbershop in Windermere, FL." },
-      { property: "og:title", content: "Services — TRINQ Barbershop" },
-      { property: "og:description", content: "Men's haircuts, skin fades, beard trims, line ups, hot towel shaves, and full grooming at TRINQ Barbershop in Windermere, FL." },
-    ],
-  }),
-});
-
-function ServicesPage() {
+export default function ServicesPage() {
   const { t } = useI18n();
+  useEffect(() => {
+    document.title = "Services — TRINQ Barbershop";
+  }, []);
   return (
     <main className="flex-1">
       {/* Page Header */}

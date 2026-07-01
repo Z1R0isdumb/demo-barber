@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { useEffect } from "react";
 import { DemoOverlay } from "../components/DemoOverlay";
 import { useI18n } from "../lib/i18n";
 import galleryLounge from "../assets/gallery-lounge.jpg";
@@ -21,20 +21,11 @@ const galleryItems = [
   { src: serviceTreatment, key: "classic", span: "" },
 ];
 
-export const Route = createFileRoute("/gallery")({
-  component: GalleryPage,
-  head: () => ({
-    meta: [
-      { title: "Gallery — TRINQ Barbershop" },
-      { name: "description", content: "Fades, beard grooming, classic cuts, modern styles, clean lineups, and the atmosphere of TRINQ Barbershop in Windermere, FL." },
-      { property: "og:title", content: "Gallery — TRINQ Barbershop" },
-      { property: "og:description", content: "Fades, beard grooming, classic cuts, modern styles, clean lineups, and the atmosphere of TRINQ Barbershop in Windermere, FL." },
-    ],
-  }),
-});
-
-function GalleryPage() {
+export default function GalleryPage() {
   const { t } = useI18n();
+  useEffect(() => {
+    document.title = "Gallery — TRINQ Barbershop";
+  }, []);
   return (
     <main className="flex-1">
       {/* Page Header */}
