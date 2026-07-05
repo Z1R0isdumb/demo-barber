@@ -13,22 +13,22 @@ const en: Dict = {
   "nav.location": "Location",
   "nav.book": "Book Now",
   // home hero
-  "home.eyebrow": "Windermere, Florida",
+  "home.eyebrow": "Orlando, Florida",
   "home.title.a": "Premium",
   "home.title.b": "Barbering",
-  "home.title.c": "in Windermere",
+  "home.title.c": "in Orlando",
   "home.hero.desc":
-    "Precision cuts, clean fades, beard grooming, and personalized service designed to help you look sharp, feel confident, and stand out.",
+    "Professional barber services in Orlando with a clean, comfortable atmosphere and experienced barbers — precision cuts, beard grooming, and personalized service.",
   "home.cta.book": "Book Appointment",
   "home.cta.services": "View Services",
   "home.reviews": "reviews",
   // about
-  "home.about.eyebrow": "About TRINQ",
+  "home.about.eyebrow": "About Master Barber USA",
   "home.about.title": "More Than a Haircut",
   "home.about.desc":
-    "TRINQ BARBERSHOP, located in Windermere, Florida, delivers a premium grooming experience focused on precision, style, and confidence. From modern fades to classic cuts and beard grooming, every service is tailored to the client. At TRINQ, every detail matters — from the moment you walk in to the final touch. This is a clean, sharp, and confident grooming experience.",
+    "Master Barber USA, located in Orlando, Florida, delivers professional barber services in a clean, comfortable atmosphere with experienced barbers. From modern fades to classic cuts and beard grooming, every service is tailored to the client — every detail matters, from the moment you walk in to the final touch.",
   "home.about.tagline": "Precision. Style. Confidence.",
-  "home.about.standard": "— The TRINQ standard",
+  "home.about.standard": "— The Master Barber USA standard",
   // services preview
   "home.services.eyebrow": "What We Offer",
   "home.services.title": "Services",
@@ -49,13 +49,13 @@ const en: Dict = {
   "home.reviews.verified": "Verified Client",
   // location home
   "home.visit.eyebrow": "Visit Us",
-  "home.visit.title": "TRINQ Barbershop",
+  "home.visit.title": "Master Barber USA",
   "home.visit.hours": "Business Hours",
   "home.visit.directions": "Get Directions",
   "home.visit.call": "Call Now",
   // CTA band
   "cta.title": "Ready for your next cut?",
-  "cta.desc": "Book your appointment today and experience premium barbering in Windermere.",
+  "cta.desc": "Book your appointment today and experience premium barbering in Orlando.",
   "cta.button": "Book Your Appointment",
   // days
   "day.sunday": "Sunday",
@@ -70,52 +70,44 @@ const en: Dict = {
   "services.eyebrow": "What We Do",
   "services.title": "Barbering Services",
   "services.desc":
-    "Every service at TRINQ is delivered with precision, care, and the attention to detail that defines a premium barbering experience.",
+    "Every service at Master Barber USA is delivered with precision, care, and the attention to detail that defines a premium barbering experience.",
   // service items
   "svc.haircut.name": "Haircut",
   "svc.haircut.desc":
-    "Professional haircut tailored to your style and face shape. Includes consultation, precise execution, and detailed finishing for a clean, modern look.",
+    "Professional haircut tailored to your style and face shape. Includes consultation, precise execution, and detailed finishing for a clean, modern look. 35 min.",
+  "svc.haircutBeard.name": "Haircut and Beard",
+  "svc.haircutBeard.desc":
+    "Complete grooming combo: precision haircut paired with a full beard service for a sharp, well-defined look. 55 min.",
+  "svc.beardTrim.name": "Beard Trim",
+  "svc.beardTrim.desc":
+    "Clean beard trim with precise shaping and defined lines for a polished, well-groomed finish. 25 min.",
+  "svc.headShave.name": "Head Shave",
+  "svc.headShave.desc":
+    "Smooth, close head shave for a clean, refined look. 15 min.",
+  "svc.beardCare.name": "Beard Care",
+  "svc.beardCare.desc":
+    "Full beard care service focused on shaping, softening, and conditioning for a healthy, well-defined beard. 30 min.",
   "svc.eyebrows.name": "Eyebrows",
   "svc.eyebrows.desc":
-    "Eyebrow grooming service performed with a straight razor, designed to clean, shape, and define your brows while enhancing your facial features with a natural and well-balanced look.",
-  "svc.beardPremium.name": "Beard Trim Premium (Hot Towel)",
-  "svc.beardPremium.desc":
-    "Our premium hot towel beard service featuring a precise trim and clean shave, enhanced with warm towels for relaxation, skin comfort, and a smooth, refined finish.",
-  "svc.beardExpress.name": "Beard Trim Express",
-  "svc.beardExpress.desc":
-    "Express beard trim service designed for quick maintenance, delivering a clean, defined look with precise shaping and minimal time.",
-  "svc.comboPremium.name": "Haircut + Beard Trim Premium (Hot Towel)",
-  "svc.comboPremium.desc":
-    "Haircut and beard trim combo with hot towel service, delivering a precise, tailored cut and expertly sculpted beard, finished with a relaxing hot towel for a clean, polished look.",
-  "svc.comboExpress.name": "Haircut + Beard Trim Express",
-  "svc.comboExpress.desc":
-    "Haircut and express beard trim combo, delivering a precise, tailored haircut paired with a quick, clean beard shaping for a sharp and well-groomed look in minimal time.",
-  "svc.waxing.name": "Nose and Ear Waxing",
-  "svc.waxing.desc":
-    "Nose and ear waxing service using premium wax to safely and effectively remove unwanted hair, leaving a clean, smooth, and well-groomed appearance.",
-  "svc.straightening.name": "Hair Straightening",
-  "svc.straightening.desc":
-    "Professional hair straightening service designed to smooth and align the hair, reducing frizz and enhancing shine for a sleek, polished, and long-lasting finish.",
-  "svc.platinum.name": "Platinum — Hair Bleaching",
-  "svc.platinum.desc":
-    "Platinum hair bleaching service designed to lift color safely, creating a bright, even, and striking platinum finish while maintaining hair health and shine.",
-  "svc.lineup.name": "Lineup (Pézinho)",
-  "svc.lineup.desc":
-    "Achieve a sharp, clean finish with our Men's Lineup service. Our barbers precisely shape your hairline and edges, enhancing your overall look with crisp, defined lines for a polished and well-groomed appearance.",
-  "svc.lights.name": "Hair Lights (Luzes)",
-  "svc.lights.desc":
-    "Professional cap highlights using bleach to achieve a natural and evenly distributed lightening effect.",
+    "Eyebrow grooming designed to clean, shape, and define your brows while enhancing your facial features with a natural, well-balanced look. 15 min.",
+  "svc.blackMask.name": "Black Mask",
+  "svc.blackMask.desc":
+    "Deep-cleansing black mask treatment that clears pores and refreshes skin for a clean, revitalized finish. 30 min.",
+  "svc.brazilianProgressive.name": "Brazilian Progressive",
+  "svc.brazilianProgressive.desc":
+    "Brazilian progressive smoothing treatment that reduces frizz and aligns the hair for a sleek, polished, long-lasting finish. 1 hr.",
   "svc.book": "Book Now",
+  "svc.duration": "min",
+  "svc.was": "Was",
   // barbers
   "barbers.eyebrow": "The Team",
   "barbers.title": "Our Barbers",
   "barbers.desc":
-    "Every barber at TRINQ is a craftsman — dedicated to precision, style, and delivering a premium grooming experience.",
-  "barbers.role": "TRINQ Barber",
-  "barbers.reviews.4": "4 Reviews",
-  "barbers.reviews.2": "2 Reviews",
+    "Every barber at Master Barber USA is a craftsman — dedicated to precision, style, and delivering a professional grooming experience.",
+  "barbers.role": "Master Barber",
   "barbers.featured": "Featured Service",
   "barbers.bookWith": "Book with",
+  "barbers.reviews": "Reviews",
   // gallery
   "gallery.eyebrow": "Visual Journal",
   "gallery.title": "Gallery",
@@ -132,10 +124,14 @@ const en: Dict = {
   // location page
   "location.eyebrow": "Find Us",
   "location.title": "Location & Hours",
-  "location.desc": "TRINQ Barbershop is located in Windermere, Florida. Walk in or book ahead.",
+  "location.desc": "Master Barber USA is located in Orlando, Florida. Walk in or book ahead.",
   "location.address": "Address",
+  "amenities.title": "Amenities",
+  "amenities.parking": "Parking space",
+  "amenities.wifi": "Wi-Fi",
+  "amenities.cards": "Credit cards accepted",
   // footer
-  "footer.tagline": "Premium barbering in Windermere, Florida.",
+  "footer.tagline": "Professional barber services in Orlando, Florida.",
   "footer.visit": "Visit",
   "footer.quick": "Quick Links",
   "footer.hours": "Hours",
@@ -156,19 +152,20 @@ const pt: Dict = {
   "home.eyebrow": "Windermere, Flórida",
   "home.title.a": "Barbearia",
   "home.title.b": "Premium",
-  "home.title.c": "em Windermere",
+  "home.title.c": "em Orlando",
+  // override eyebrow above
   "home.hero.desc":
-    "Cortes precisos, degradês impecáveis, cuidados com a barba e atendimento personalizado, criados para você parecer impecável, se sentir confiante e se destacar.",
+    "Serviços profissionais de barbearia em Orlando, com ambiente limpo, confortável e barbeiros experientes — cortes precisos, cuidados com a barba e atendimento personalizado.",
   "home.cta.book": "Agendar Horário",
   "home.cta.services": "Ver Serviços",
   "home.reviews": "avaliações",
 
-  "home.about.eyebrow": "Sobre a TRINQ",
+  "home.about.eyebrow": "Sobre a Master Barber USA",
   "home.about.title": "Muito Mais que um Corte",
   "home.about.desc":
-    "A TRINQ BARBERSHOP, localizada em Windermere, Flórida, oferece uma experiência premium em cuidados masculinos, com foco em precisão, estilo e confiança. Dos degradês modernos aos cortes clássicos e cuidados com a barba, cada serviço é totalmente personalizado. Na TRINQ, cada detalhe importa — do momento em que você entra ao toque final. Uma experiência de barbearia limpa, sofisticada e cheia de confiança.",
+    "A Master Barber USA, em Orlando, Flórida, oferece serviços profissionais de barbearia em um ambiente limpo, confortável e com barbeiros experientes. Dos degradês modernos aos cortes clássicos e cuidados com a barba, cada serviço é totalmente personalizado — cada detalhe importa, do momento em que você entra ao toque final.",
   "home.about.tagline": "Precisão. Estilo. Confiança.",
-  "home.about.standard": "— O padrão TRINQ",
+  "home.about.standard": "— O padrão Master Barber USA",
 
   "home.services.eyebrow": "O Que Oferecemos",
   "home.services.title": "Serviços",
@@ -189,14 +186,14 @@ const pt: Dict = {
   "home.reviews.verified": "Cliente Verificado",
 
   "home.visit.eyebrow": "Visite-nos",
-  "home.visit.title": "TRINQ Barbershop",
+  "home.visit.title": "Master Barber USA",
   "home.visit.hours": "Horário de Funcionamento",
   "home.visit.directions": "Como Chegar",
   "home.visit.call": "Ligar Agora",
 
   "cta.title": "Pronto para o próximo corte?",
   "cta.desc":
-    "Agende seu horário hoje e viva a experiência premium de barbearia em Windermere.",
+    "Agende seu horário hoje e viva a experiência premium de barbearia em Orlando.",
   "cta.button": "Agende Seu Horário",
 
   "day.sunday": "Domingo",
@@ -211,52 +208,44 @@ const pt: Dict = {
   "services.eyebrow": "O Que Fazemos",
   "services.title": "Serviços da Barbearia",
   "services.desc":
-    "Cada serviço da TRINQ é entregue com precisão, cuidado e a atenção aos detalhes que definem uma experiência premium de barbearia.",
+    "Cada serviço da Master Barber USA é entregue com precisão, cuidado e a atenção aos detalhes que definem uma experiência premium de barbearia.",
 
   "svc.haircut.name": "Corte de Cabelo",
   "svc.haircut.desc":
-    "Corte profissional feito sob medida para o seu estilo e formato de rosto. Inclui consulta, execução precisa e acabamento detalhado para um visual limpo e moderno.",
+    "Corte profissional feito sob medida para o seu estilo e formato de rosto. Inclui consulta, execução precisa e acabamento detalhado. 35 min.",
+  "svc.haircutBeard.name": "Corte e Barba",
+  "svc.haircutBeard.desc":
+    "Combo completo: corte preciso e barba feita para um visual afiado e bem definido. 55 min.",
+  "svc.beardTrim.name": "Aparar a Barba",
+  "svc.beardTrim.desc":
+    "Barba aparada com modelagem precisa e linhas definidas para um acabamento polido e bem cuidado. 25 min.",
+  "svc.headShave.name": "Cabeça Raspada",
+  "svc.headShave.desc":
+    "Raspagem completa da cabeça, com acabamento suave e refinado. 15 min.",
+  "svc.beardCare.name": "Cuidados com a Barba",
+  "svc.beardCare.desc":
+    "Serviço completo de cuidados com a barba, focado em modelar, suavizar e condicionar para uma barba saudável e bem definida. 30 min.",
   "svc.eyebrows.name": "Sobrancelhas",
   "svc.eyebrows.desc":
-    "Design de sobrancelhas feito com navalha, criado para limpar, modelar e definir suas sobrancelhas, realçando seus traços faciais com um resultado natural e equilibrado.",
-  "svc.beardPremium.name": "Barba Premium (Toalha Quente)",
-  "svc.beardPremium.desc":
-    "Nosso serviço premium de barba com toalha quente, com aparo preciso e barba feita, potencializado por toalhas quentes para relaxamento, conforto da pele e um acabamento suave e refinado.",
-  "svc.beardExpress.name": "Barba Express",
-  "svc.beardExpress.desc":
-    "Serviço de barba express feito para manutenção rápida, entregando um visual limpo e definido com modelagem precisa em pouco tempo.",
-  "svc.comboPremium.name": "Corte + Barba Premium (Toalha Quente)",
-  "svc.comboPremium.desc":
-    "Combo de corte e barba com serviço de toalha quente, entregando um corte preciso e sob medida, com barba esculpida por especialistas e finalizado com toalha quente para um visual limpo e sofisticado.",
-  "svc.comboExpress.name": "Corte + Barba Express",
-  "svc.comboExpress.desc":
-    "Combo de corte e barba express, entregando um corte preciso e personalizado combinado com uma modelagem de barba rápida e limpa, para um visual afiado e bem cuidado em pouco tempo.",
-  "svc.waxing.name": "Depilação de Nariz e Orelha",
-  "svc.waxing.desc":
-    "Serviço de depilação de nariz e orelha com cera premium, removendo pelos indesejados com segurança e eficácia, deixando um aspecto limpo, suave e bem cuidado.",
-  "svc.straightening.name": "Alisamento Capilar",
-  "svc.straightening.desc":
-    "Serviço profissional de alisamento capilar, criado para suavizar e alinhar os fios, reduzindo o frizz e realçando o brilho para um acabamento sedoso, polido e duradouro.",
-  "svc.platinum.name": "Platinado — Descoloração",
-  "svc.platinum.desc":
-    "Serviço de descoloração platinada, feito para clarear com segurança, criando um acabamento platinado brilhante, uniforme e marcante, mantendo a saúde e o brilho dos fios.",
-  "svc.lineup.name": "Pézinho (Lineup)",
-  "svc.lineup.desc":
-    "Conquiste um acabamento afiado e impecável com nosso serviço de Pézinho. Nossos barbeiros modelam com precisão o contorno e as laterais do cabelo, realçando seu visual com linhas nítidas e definidas para uma aparência polida e bem cuidada.",
-  "svc.lights.name": "Luzes",
-  "svc.lights.desc":
-    "Luzes profissionais na touca com descoloração, para um efeito clareador natural e uniformemente distribuído.",
+    "Design de sobrancelhas para limpar, modelar e definir, realçando seus traços com um resultado natural e equilibrado. 15 min.",
+  "svc.blackMask.name": "Black Mask",
+  "svc.blackMask.desc":
+    "Máscara preta de limpeza profunda que desobstrui os poros e revitaliza a pele para um acabamento limpo e renovado. 30 min.",
+  "svc.brazilianProgressive.name": "Progressiva Brasileira",
+  "svc.brazilianProgressive.desc":
+    "Progressiva brasileira que reduz o frizz e alinha os fios para um acabamento sedoso, polido e duradouro. 1 h.",
   "svc.book": "Agendar",
+  "svc.duration": "min",
+  "svc.was": "De",
 
   "barbers.eyebrow": "A Equipe",
   "barbers.title": "Nossos Barbeiros",
   "barbers.desc":
-    "Cada barbeiro da TRINQ é um artesão — dedicado à precisão, ao estilo e a entregar uma experiência premium de cuidados masculinos.",
-  "barbers.role": "Barbeiro TRINQ",
-  "barbers.reviews.4": "4 Avaliações",
-  "barbers.reviews.2": "2 Avaliações",
+    "Cada barbeiro da Master Barber USA é um artesão — dedicado à precisão, ao estilo e a entregar uma experiência profissional de cuidados masculinos.",
+  "barbers.role": "Master Barber",
   "barbers.featured": "Serviço em Destaque",
   "barbers.bookWith": "Agendar com",
+  "barbers.reviews": "Avaliações",
 
   "gallery.eyebrow": "Diário Visual",
   "gallery.title": "Galeria",
@@ -274,10 +263,14 @@ const pt: Dict = {
   "location.eyebrow": "Encontre-nos",
   "location.title": "Localização e Horários",
   "location.desc":
-    "A TRINQ Barbershop fica em Windermere, Flórida. Venha sem hora marcada ou agende antes.",
+    "A Master Barber USA fica em Orlando, Flórida. Venha sem hora marcada ou agende antes.",
   "location.address": "Endereço",
+  "amenities.title": "Comodidades",
+  "amenities.parking": "Estacionamento",
+  "amenities.wifi": "Wi-Fi",
+  "amenities.cards": "Cartões de crédito aceitos",
 
-  "footer.tagline": "Barbearia premium em Windermere, Flórida.",
+  "footer.tagline": "Serviços profissionais de barbearia em Orlando, Flórida.",
   "footer.visit": "Visite",
   "footer.quick": "Links Rápidos",
   "footer.hours": "Horários",
