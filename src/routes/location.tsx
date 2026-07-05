@@ -15,7 +15,7 @@ const hours: [string, string][] = [
 export default function LocationPage() {
   const { t } = useI18n();
   useEffect(() => {
-    document.title = "Location & Hours — TRINQ Barbershop";
+    document.title = "Location & Hours — Master Barber USA";
   }, []);
   return (
     <main className="flex-1">
@@ -34,7 +34,7 @@ export default function LocationPage() {
       <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-2">
           <div>
-            <h2 className="font-heading text-2xl font-bold text-foreground">TRINQ Barbershop</h2>
+            <h2 className="font-heading text-2xl font-bold text-foreground">Master Barber USA</h2>
             <div className="mt-6 space-y-5">
               <div className="flex items-start gap-3">
                 <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
@@ -73,17 +73,24 @@ export default function LocationPage() {
                 <Navigation className="h-4 w-4" /> {t("home.visit.directions")}
               </a>
               <a
-                href="tel:"
-                className="inline-flex items-center gap-2 rounded-md border border-border px-5 py-3 text-sm font-semibold text-foreground hover:bg-accent"
-              >
-                <Phone className="h-4 w-4" /> {t("home.visit.call")}
-              </a>
-              <a
                 href="https://booksy.com/en-us/459969_master-barber-usa_barber-shop_134763_orlando?do=invite&_branch_match_id=1602360762170489818&utm_medium=merchant_customer_invite&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT07J0UvKz88urtRLzs%2FVN4r08AzxqAp0NEiyrytKTUstKsrMS49PKsovL04tsnXOKMrPTQUAW23SuzwAAAA%3D" target="_blank" rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-md border border-primary/40 bg-primary/10 px-5 py-3 text-sm font-semibold text-primary hover:bg-primary/20"
               >
                 {t("nav.book")}
               </a>
+            </div>
+
+            <div className="mt-10">
+              <h3 className="font-heading text-sm font-semibold uppercase tracking-wider text-foreground">
+                {t("amenities.title")}
+              </h3>
+              <ul className="mt-4 flex flex-wrap gap-2">
+                {["amenities.parking", "amenities.wifi", "amenities.cards"].map((k) => (
+                  <li key={k} className="rounded-md border border-border/50 bg-card/30 px-3 py-1.5 text-xs font-medium text-muted-foreground">
+                    {t(k)}
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
 
