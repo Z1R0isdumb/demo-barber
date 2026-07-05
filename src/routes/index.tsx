@@ -11,7 +11,7 @@ import serviceBeard from "../assets/service-beard.jpg";
 export default function HomePage() {
   const { t } = useI18n();
   useEffect(() => {
-    document.title = "TRINQ Barbershop — Premium Barbering in Windermere, FL";
+    document.title = "Master Barber USA — Premium Barbering in Orlando, FL";
   }, []);
   return (
     <main className="flex-1">
@@ -59,7 +59,7 @@ export default function HomePage() {
                   <Star key={i} className="h-4 w-4 fill-primary text-primary" />
                 ))}
               </div>
-              <span><span className="font-semibold text-foreground">5.0</span> · 6 {t("home.reviews")}</span>
+              <span><span className="font-semibold text-foreground">5.0</span> · 217 {t("home.reviews")}</span>
             </div>
           </div>
         </div>
@@ -194,7 +194,7 @@ export default function HomePage() {
               ))}
             </div>
             <span className="font-heading text-2xl font-bold text-foreground">5.0</span>
-            <span className="text-muted-foreground">· 6 {t("home.reviews")}</span>
+            <span className="text-muted-foreground">· 217 {t("home.reviews")}</span>
           </div>
         </div>
         <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-3">
@@ -256,12 +256,6 @@ export default function HomePage() {
                   className="inline-flex items-center gap-2 rounded-md bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground hover:bg-primary/90"
                 >
                   <Navigation className="h-4 w-4" /> {t("home.visit.directions")}
-                </a>
-                <a
-                  href="tel:"
-                  className="inline-flex items-center gap-2 rounded-md border border-border px-5 py-3 text-sm font-semibold text-foreground hover:bg-accent"
-                >
-                  <Phone className="h-4 w-4" /> {t("home.visit.call")}
                 </a>
                 <a
                   href="https://booksy.com/en-us/459969_master-barber-usa_barber-shop_134763_orlando?do=invite&_branch_match_id=1602360762170489818&utm_medium=merchant_customer_invite&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT07J0UvKz88urtRLzs%2FVN4r08AzxqAp0NEiyrytKTUstKsrMS49PKsovL04tsnXOKMrPTQUAW23SuzwAAAA%3D" target="_blank" rel="noopener noreferrer"
