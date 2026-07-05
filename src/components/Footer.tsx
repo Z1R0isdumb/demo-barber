@@ -12,7 +12,7 @@ export function Footer() {
             <Link to="/" className="flex items-center gap-2">
               <Scissors className="h-5 w-5 text-primary" />
               <span className="font-heading text-base font-bold tracking-tight">
-                TRIN<span className="text-primary">Q</span> BARBERSHOP
+                MASTER BARBER <span className="text-primary">USA</span>
               </span>
             </Link>
             <p className="mt-4 text-sm text-muted-foreground">{t("footer.tagline")}</p>
@@ -33,7 +33,7 @@ export function Footer() {
             <ul className="mt-4 space-y-3">
               <li className="flex items-start gap-3 text-sm text-muted-foreground">
                 <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
-                <span>6536 Old Brick Rd Unit 110, Suite 6<br />Windermere, FL 34786</span>
+                <span>5536 International Dr<br />Orlando, FL 32819</span>
               </li>
             </ul>
             <h3 className="mt-6 font-heading text-sm font-semibold uppercase tracking-wider text-foreground">
@@ -45,7 +45,7 @@ export function Footer() {
               <li><Link to="/barbers" className="text-muted-foreground hover:text-primary">{t("nav.barbers")}</Link></li>
               <li><Link to="/gallery" className="text-muted-foreground hover:text-primary">{t("nav.gallery")}</Link></li>
               <li><Link to="/location" className="text-muted-foreground hover:text-primary">{t("nav.location")}</Link></li>
-              <li><a href="https://www.vagaro.com/trinqbarbershop/book-now" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80">{t("nav.book")}</a></li>
+              <li><a href="https://booksy.com/en-us/459969_master-barber-usa_barber-shop_134763_orlando?do=invite&_branch_match_id=1602360762170489818&utm_medium=merchant_customer_invite&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT07J0UvKz88urtRLzs%2FVN4r08AzxqAp0NEiyrytKTUstKsrMS49PKsovL04tsnXOKMrPTQUAW23SuzwAAAA%3D" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80">{t("nav.book")}</a></li>
             </ul>
           </div>
 

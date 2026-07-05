@@ -22,7 +22,7 @@ export function Header() {
         <Link to="/" className="flex items-center gap-2 transition-opacity hover:opacity-80">
           <Scissors className="h-6 w-6 text-primary" />
           <span className="font-heading text-lg font-bold tracking-tight text-foreground">
-            TRIN<span className="text-primary">Q</span> BARBERSHOP
+            MASTER BARBER <span className="text-primary">USA</span>
           </span>
         </Link>
 
@@ -46,7 +46,7 @@ export function Header() {
         <div className="hidden items-center gap-3 md:flex">
           <LanguageToggle />
           <a
-            href="https://www.vagaro.com/trinqbarbershop/book-now" target="_blank" rel="noopener noreferrer"
+            href="https://booksy.com/en-us/459969_master-barber-usa_barber-shop_134763_orlando?do=invite&_branch_match_id=1602360762170489818&utm_medium=merchant_customer_invite&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT07J0UvKz88urtRLzs%2FVN4r08AzxqAp0NEiyrytKTUstKsrMS49PKsovL04tsnXOKMrPTQUAW23SuzwAAAA%3D" target="_blank" rel="noopener noreferrer"
             className="rounded-md bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
           >
             {t("nav.book")}
@@ -84,7 +84,7 @@ export function Header() {
               </NavLink>
             ))}
             <a
-              href="https://www.vagaro.com/trinqbarbershop/book-now" target="_blank" rel="noopener noreferrer"
+              href="https://booksy.com/en-us/459969_master-barber-usa_barber-shop_134763_orlando?do=invite&_branch_match_id=1602360762170489818&utm_medium=merchant_customer_invite&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT07J0UvKz88urtRLzs%2FVN4r08AzxqAp0NEiyrytKTUstKsrMS49PKsovL04tsnXOKMrPTQUAW23SuzwAAAA%3D" target="_blank" rel="noopener noreferrer"
               onClick={() => setMobileOpen(false)}
               className="mt-2 rounded-md bg-primary px-4 py-3 text-center text-sm font-semibold text-primary-foreground"
             >
