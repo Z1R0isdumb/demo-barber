@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 import HomePage from "./routes/index";
@@ -14,6 +14,7 @@ export function App() {
       <Header />
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/demo-barber/*" element={<Navigate to="/" replace />} />
         <Route path="/services" element={<ServicesPage />} />
         <Route path="/barbers" element={<BarbersPage />} />
         <Route path="/gallery" element={<GalleryPage />} />
