@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, Star, MapPin, Phone, Navigation } from "lucide-react";
+import { ArrowRight, Star, MapPin, Navigation } from "lucide-react";
 import { DemoOverlay } from "../components/DemoOverlay";
 import { useI18n } from "../lib/i18n";
 import heroImage from "../assets/hero-barbershop.jpg";
