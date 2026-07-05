@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { MapPin, Phone, Navigation, Clock } from "lucide-react";
+import { MapPin, Navigation, Clock } from "lucide-react";
 import { useI18n } from "../lib/i18n";
 
 const hours: [string, string][] = [
