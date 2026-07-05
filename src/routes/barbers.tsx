@@ -5,9 +5,7 @@ import { DemoOverlay } from "../components/DemoOverlay";
 import { useI18n } from "../lib/i18n";
 
 const barbers = [
-  { name: "Bruno Renan", rating: "5.0", reviews: 217, serviceKey: "svc.haircut.name", price: "$38" },
-  { name: "Yuri", rating: "5.0", reviews: 217, serviceKey: "svc.haircutBeard.name", price: "$50.40" },
-  { name: "Vinny", rating: "5.0", reviews: 217, serviceKey: "svc.beardTrim.name", price: "$25" },
+  { name: "Bruno Renan", rating: "5.0", reviews: 217, serviceKey: "svc.haircut.name" },
 ];
 
 export default function BarbersPage() {
@@ -32,7 +30,7 @@ export default function BarbersPage() {
 
       {/* Barbers Grid */}
       <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
           {barbers.map((barber) => (
             <div
               key={barber.name}
@@ -62,18 +60,13 @@ export default function BarbersPage() {
                   <span>·</span>
                   <span>{barber.reviews} {t("barbers.reviews")}</span>
                 </div>
-                <div className="mt-6 flex items-end justify-between border-t border-border/50 pt-4">
-                  <div>
-                    <p className="text-xs uppercase tracking-wider text-muted-foreground">
-                      {t("barbers.featured")}
-                    </p>
-                    <p className="mt-1 font-heading text-lg font-semibold text-foreground">
-                      {t(barber.serviceKey)}
-                    </p>
-                  </div>
-                  <span className="font-heading text-2xl font-bold text-primary">
-                    {barber.price}
-                  </span>
+                <div className="mt-6 border-t border-border/50 pt-4">
+                  <p className="text-xs uppercase tracking-wider text-muted-foreground">
+                    {t("barbers.featured")}
+                  </p>
+                  <p className="mt-1 font-heading text-lg font-semibold text-foreground">
+                    {t(barber.serviceKey)}
+                  </p>
                 </div>
                 <a
                   href="https://booksy.com/en-us/459969_master-barber-usa_barber-shop_134763_orlando?do=invite&_branch_match_id=1602360762170489818&utm_medium=merchant_customer_invite&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT07J0UvKz88urtRLzs%2FVN4r08AzxqAp0NEiyrytKTUstKsrMS49PKsovL04tsnXOKMrPTQUAW23SuzwAAAA%3D" target="_blank" rel="noopener noreferrer"
