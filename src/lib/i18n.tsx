@@ -149,7 +149,7 @@ const pt: Dict = {
   "nav.location": "Localização",
   "nav.book": "Agendar",
 
-  "home.eyebrow": "Windermere, Flórida",
+  "home.eyebrow": "Orlando, Flórida",
   "home.title.a": "Barbearia",
   "home.title.b": "Premium",
   "home.title.c": "em Orlando",
