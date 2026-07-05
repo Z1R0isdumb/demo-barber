@@ -5,26 +5,15 @@ import { DemoOverlay } from "../components/DemoOverlay";
 import { useI18n } from "../lib/i18n";
 
 const barbers = [
-  {
-    name: "Vinicius Fonseca",
-    rating: "5.0",
-    reviewsKey: "barbers.reviews.4",
-    serviceKey: "svc.haircut.name",
-    price: "$35",
-  },
-  {
-    name: "Julio Mariano",
-    rating: "5.0",
-    reviewsKey: "barbers.reviews.2",
-    serviceKey: "svc.haircut.name",
-    price: "$35",
-  },
+  { name: "Bruno Renan", rating: "5.0", reviews: 217, serviceKey: "svc.haircut.name", price: "$38" },
+  { name: "Yuri", rating: "5.0", reviews: 217, serviceKey: "svc.haircutBeard.name", price: "$50.40" },
+  { name: "Vinny", rating: "5.0", reviews: 217, serviceKey: "svc.beardTrim.name", price: "$25" },
 ];
 
 export default function BarbersPage() {
   const { t } = useI18n();
   useEffect(() => {
-    document.title = "Our Barbers — TRINQ Barbershop";
+    document.title = "Our Barbers — Master Barber USA";
   }, []);
   return (
     <main className="flex-1">
@@ -43,7 +32,7 @@ export default function BarbersPage() {
 
       {/* Barbers Grid */}
       <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {barbers.map((barber) => (
             <div
               key={barber.name}
@@ -71,7 +60,7 @@ export default function BarbersPage() {
                   </div>
                   <span className="font-semibold text-foreground">{barber.rating}</span>
                   <span>·</span>
-                  <span>{t(barber.reviewsKey)}</span>
+                  <span>{barber.reviews} {t("barbers.reviews")}</span>
                 </div>
                 <div className="mt-6 flex items-end justify-between border-t border-border/50 pt-4">
                   <div>
@@ -87,7 +76,7 @@ export default function BarbersPage() {
                   </span>
                 </div>
                 <a
-                  href="https://www.vagaro.com/trinqbarbershop/book-now" target="_blank" rel="noopener noreferrer"
+                  href="https://booksy.com/en-us/459969_master-barber-usa_barber-shop_134763_orlando?do=invite&_branch_match_id=1602360762170489818&utm_medium=merchant_customer_invite&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT07J0UvKz88urtRLzs%2FVN4r08AzxqAp0NEiyrytKTUstKsrMS49PKsovL04tsnXOKMrPTQUAW23SuzwAAAA%3D" target="_blank" rel="noopener noreferrer"
                   className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-md bg-primary px-4 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
                 >
                   {t("barbers.bookWith")} {barber.name.split(" ")[0]}

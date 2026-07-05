@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, Star, MapPin, Phone, Navigation } from "lucide-react";
+import { ArrowRight, Star, MapPin, Navigation } from "lucide-react";
 import { DemoOverlay } from "../components/DemoOverlay";
 import { useI18n } from "../lib/i18n";
 import heroImage from "../assets/hero-barbershop.jpg";
@@ -11,7 +11,7 @@ import serviceBeard from "../assets/service-beard.jpg";
 export default function HomePage() {
   const { t } = useI18n();
   useEffect(() => {
-    document.title = "TRINQ Barbershop — Premium Barbering in Windermere, FL";
+    document.title = "Master Barber USA — Premium Barbering in Orlando, FL";
   }, []);
   return (
     <main className="flex-1">
@@ -40,7 +40,7 @@ export default function HomePage() {
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <a
-                href="https://www.vagaro.com/trinqbarbershop/book-now" target="_blank" rel="noopener noreferrer"
+                href="https://booksy.com/en-us/459969_master-barber-usa_barber-shop_134763_orlando?do=invite&_branch_match_id=1602360762170489818&utm_medium=merchant_customer_invite&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT07J0UvKz88urtRLzs%2FVN4r08AzxqAp0NEiyrytKTUstKsrMS49PKsovL04tsnXOKMrPTQUAW23SuzwAAAA%3D" target="_blank" rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-md bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
               >
                 {t("home.cta.book")}
@@ -59,7 +59,7 @@ export default function HomePage() {
                   <Star key={i} className="h-4 w-4 fill-primary text-primary" />
                 ))}
               </div>
-              <span><span className="font-semibold text-foreground">5.0</span> · 6 {t("home.reviews")}</span>
+              <span><span className="font-semibold text-foreground">5.0</span> · 217 {t("home.reviews")}</span>
             </div>
           </div>
         </div>
@@ -194,7 +194,7 @@ export default function HomePage() {
               ))}
             </div>
             <span className="font-heading text-2xl font-bold text-foreground">5.0</span>
-            <span className="text-muted-foreground">· 6 {t("home.reviews")}</span>
+            <span className="text-muted-foreground">· 217 {t("home.reviews")}</span>
           </div>
         </div>
         <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-3">
@@ -225,7 +225,7 @@ export default function HomePage() {
               </h2>
               <p className="mt-4 flex items-start gap-3 text-base text-muted-foreground">
                 <MapPin className="mt-1 h-5 w-5 shrink-0 text-primary" />
-                <span>6536 Old Brick Rd Unit 110, Suite 6<br />Windermere, FL 34786</span>
+                <span>5536 International Dr<br />Orlando, FL 32819</span>
               </p>
               <div className="mt-8">
                 <h3 className="font-heading text-sm font-semibold uppercase tracking-wider text-foreground">
@@ -250,7 +250,7 @@ export default function HomePage() {
               </div>
               <div className="mt-8 flex flex-wrap gap-3">
                 <a
-                  href="https://www.google.com/maps/dir/?api=1&destination=6536+Old+Brick+Rd+Unit+110+Suite+6+Windermere+FL+34786"
+                  href="https://www.google.com/maps/dir/?api=1&destination=5536+International+Dr+Orlando+FL+32819"
                   target="_blank"
                   rel="noreferrer"
                   className="inline-flex items-center gap-2 rounded-md bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground hover:bg-primary/90"
@@ -258,13 +258,7 @@ export default function HomePage() {
                   <Navigation className="h-4 w-4" /> {t("home.visit.directions")}
                 </a>
                 <a
-                  href="tel:"
-                  className="inline-flex items-center gap-2 rounded-md border border-border px-5 py-3 text-sm font-semibold text-foreground hover:bg-accent"
-                >
-                  <Phone className="h-4 w-4" /> {t("home.visit.call")}
-                </a>
-                <a
-                  href="https://www.vagaro.com/trinqbarbershop/book-now" target="_blank" rel="noopener noreferrer"
+                  href="https://booksy.com/en-us/459969_master-barber-usa_barber-shop_134763_orlando?do=invite&_branch_match_id=1602360762170489818&utm_medium=merchant_customer_invite&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT07J0UvKz88urtRLzs%2FVN4r08AzxqAp0NEiyrytKTUstKsrMS49PKsovL04tsnXOKMrPTQUAW23SuzwAAAA%3D" target="_blank" rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-md border border-primary/40 bg-primary/10 px-5 py-3 text-sm font-semibold text-primary hover:bg-primary/20"
                 >
                   {t("nav.book")}
@@ -273,8 +267,8 @@ export default function HomePage() {
             </div>
             <div className="min-h-[400px] overflow-hidden border border-border/50">
               <iframe
-                title="TRINQ Barbershop location map"
-                src="https://maps.google.com/maps?q=6536%20Old%20Brick%20Rd%20Unit%20110%20Windermere%20FL%2034786&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                title="Master Barber USA location map"
+                src="https://maps.google.com/maps?q=5536%20International%20Dr%20Orlando%20FL%2032819&t=&z=15&ie=UTF8&iwloc=&output=embed"
                 className="h-full min-h-[400px] w-full grayscale"
                 loading="lazy"
               />
@@ -291,7 +285,7 @@ export default function HomePage() {
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-muted-foreground">{t("cta.desc")}</p>
           <a
-            href="https://www.vagaro.com/trinqbarbershop/book-now" target="_blank" rel="noopener noreferrer"
+            href="https://booksy.com/en-us/459969_master-barber-usa_barber-shop_134763_orlando?do=invite&_branch_match_id=1602360762170489818&utm_medium=merchant_customer_invite&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT07J0UvKz88urtRLzs%2FVN4r08AzxqAp0NEiyrytKTUstKsrMS49PKsovL04tsnXOKMrPTQUAW23SuzwAAAA%3D" target="_blank" rel="noopener noreferrer"
             className="mt-8 inline-flex items-center gap-2 rounded-md bg-primary px-8 py-4 text-base font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
           >
             {t("cta.button")}
